@@ -60,11 +60,6 @@ posts = []
 
 responses = parsed_response['data']['children']
 
-
-titles = []
-categories = []
-upvotes = []
-
 responses.map do |response|
   title = response['data']['title']
   category = response['data']['subreddit']
