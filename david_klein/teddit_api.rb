@@ -37,7 +37,10 @@ end
 #   2. http://reddit.com/r/worldnews.json
 #   3. http://reddit.com/.json
 
-url = 'http://www.reddit.com/r/cooking.json'
+puts "What subreddit do you want to see?"
+subreddit = gets.strip
+
+url = "http://www.reddit.com/r/#{subreddit}.json"
 
 response = RestClient.get(url)
 parsed_response = JSON.parse(response)
